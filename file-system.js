@@ -20,7 +20,7 @@ fs.writeFileSync('./txt/new-file.txt', textOut);
 fs.readFile('./txt/input.txt', 'utf-8', (err, data) => {
     
     console.log("Asynchronous data " + data);
-    fs.writeFile('./txt/output-async.txt', data, (err, data) => {
+    fs.writeFile('./txt/output-async.txt', data, err => {
         console.log("File was created successfully");
     })
 
